@@ -1,0 +1,747 @@
+/* 去除默认样式 */
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+body{
+	height: 2000px;
+}
+/* 宽度居中样式 */
+.w{
+	width: 1226px;
+	margin: 0 auto;
+}
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 顶部图片容器 */
+.top-img {
+	min-width: 1226px;
+	height: 120px;
+}
+.clearfix::before,.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* 顶部图片 */
+.top-img>a {
+	display: block;
+	height: 100%;
+	background: url(../images/ding.jpg) no-repeat top;
+	background-size: auto 120px;
+}
+
+/* 顶部工具栏容器 */
+.bar {
+	min-width: 1226px;
+	height: 40px;
+	background-color: #333;
+}
+
+/* 顶部工具栏内部容器 */
+.bar-nei {
+	height: 100%;
+}
+
+/* 顶部工具栏左侧ul */
+.bar-nei-left>li {
+	float: left;
+}
+
+/* 顶部工具栏左侧和右侧ul里的a标签 */
+.bar-nei-left>li>a,
+.bar-nei-right>li>a {
+	display: block;
+	height: 100%;
+	color: #b0b0b0;
+	font-size: 12px;
+	line-height: 40px;
+	padding-right: 14px;
+}
+/* 给左侧和右侧a设置hover */
+.bar-nei-left li:hover>a,
+.bar-nei-right li:hover>a {
+	color: #fff;
+}
+/* 左侧下载app文字a标签 */
+.bar-nei-left-down {
+	position: relative;
+}
+
+/* 给下载下拉框小三角设置hover后的属性 */
+.bar-nei-left-down:hover .down-sanjiao {
+	display: block;
+}
+
+/* 给下载下拉图片容器设置hover后的属性 */
+.bar-nei-left-down:hover>.down-box {
+	height: 148px;
+}
+/* 下载app下拉图片上的小三角 */
+.down-sanjiao {
+	position: absolute;
+	display: none;
+	z-index: 10;
+	width: 0;
+	height: 0;
+	top: 20px;
+	left: 14px;
+	border: transparent 10px solid;
+	border-bottom:10px solid white ;
+}
+/* 左侧下载app下拉图片容器 */
+.down-box {
+	position: absolute;
+	z-index: 9;
+	transition: .5s;
+	top: 40px;
+	left: -37px;
+	width: 124px;
+	height: 0;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+/* 下载app下拉图片a容器 */
+.bar-nei-left-down>.down-box>a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
+/* 下载app下拉图片 */
+.bar-nei-left-down>.down-box>a>img {
+	position: absolute;
+	top: 20px;
+	left: 17px;
+	width: 90px;
+}
+/* 下载app下拉图片下的文字 */
+.dowm-text {
+	position: absolute;
+	left: 17px;
+	top: 105px;
+	font-size: 15px;
+	color: #000000;
+}
+/* 给右侧li设置浮动 */
+.bar-nei-right>li {
+	float: right;
+}
+
+/* 右侧购物车的li */
+.bar-nei-right>li:nth-of-type(1) {
+	position: relative;
+}
+
+/* 给右侧购物车a单独设置样式 */
+.right-buy {
+	position: relative;
+	z-index: 10;
+	background-color: #424242;
+	padding-left: 20px;
+
+}
+
+/* 给右侧购物车a单独设置图标字体 */
+.right-buy::before {
+	content: "\e600";
+	font-family: iconfont;
+}
+
+/* 右侧购物车的li添加hover修改购物车a的样式 */
+.bar-nei-right>li:nth-of-type(1):hover>a {
+	background-color: white;
+	color: orangered;
+}
+
+/* 右侧购物车的li添加hover修改购物车下拉容器的样式 */
+.bar-nei-right>li:nth-of-type(1):hover>div {
+	height: 100px;
+}
+
+/* 右侧购物车下拉框容器 */
+.right-buy+div {
+	position: absolute;
+	z-index: 9;
+	overflow: hidden;
+	transition: .5s;
+	text-align: center;
+	line-height: 100px;
+	width: 316px;
+	height: 0;
+	font-size: 12px;
+	background-color: white;
+	right: 0;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+/* 导航菜单容器 */
+.nav {
+	position: relative;
+	height: 100px;
+}
+
+/* 导航菜单内部容器 */
+.nav-nei {
+	height: 100%;
+}
+
+/* 导航菜单内部容器左侧容器 */
+.nei-left {
+	float: left;
+	height: 100%;
+	padding-right: 180px;
+}
+
+/* 左侧容器logo */
+.nei-left>a {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	height: 49px;
+	width: 49px;
+	background: url(../images/logo.png) no-repeat -49px orangered;
+	transition:.3s;
+}
+/* 左侧容器logo设置hover */
+.nei-left>a:hover {
+	background-position: 0 0;
+}
+
+/* 导航菜单内部容器中侧容器 */
+.nei-center {
+	float: left;
+	height: 100%;
+	line-height:100px ;
+}
+
+/* 导航菜单内部容器中侧容器的ul和li */
+.nei-center>ul,
+.nei-center>ul>li {
+	float: left;
+}
+/* 导航菜单内部容器中侧容器的li */
+.nei-center>ul>li {
+	padding-right: 26px;
+}
+/* 导航菜单内部容器中侧容器的a */
+.nei-center>ul>li>a{
+	color: #333333;
+}
+/* 导航菜单内部容器中侧容器的a设置hover */
+.nei-center>ul>li:hover>a{
+	color: #ff6700;
+}
+/* 导航菜单内部容器中部容器第一个下拉框 */
+.nei-center>ul>li:nth-of-type(1):hover>.one{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第二个下拉框 */
+.nei-center>ul>li:nth-of-type(2):hover>.tow{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第三个下拉框 */
+.nei-center>ul>li:nth-of-type(3):hover>.three{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第四个下拉框 */
+.nei-center>ul>li:nth-of-type(4):hover>.four{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第五个下拉框 */
+.nei-center>ul>li:nth-of-type(5):hover>.five{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第六个下拉框 */
+.nei-center>ul>li:nth-of-type(6):hover>.six{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器中部容器第七个下拉框 */
+.nei-center>ul>li:nth-of-type(7):hover>.seven{
+	opacity: 1;
+	height: 204px;
+}
+/* 导航菜单内部容器下的下拉框 */
+.center_list{
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	left: 0;
+	transition: .8s;
+	overflow: hidden;
+	opacity: 0;
+	height: 0;
+	background-color: white;
+	z-index: 11;
+	line-height: 0;
+	border-top:1px solid #e0e0e0;
+	box-shadow: 0 3px 4px rgba(0,0,0,.18);
+}
+/* 下拉框里的li */
+.center_list>ul>li{
+	float: left;
+	width: 180px;height: 166px;
+	padding: 35px 12px 0 12px;
+}
+/* 下拉框里的a容器 */
+.center_list>ul>li>a{
+	display: block;
+	border: 0;
+	width: 160px;height: 110px;
+}
+/* 下拉框里的图片 */
+.center_list>ul>li>a>img{
+	height: 110px;
+	padding-right: 21px;
+	border-right: #000000 1px solid;
+	margin-bottom: 15px;
+}
+/* 去除下拉框里最后一个图片边框 */
+.center_list>ul>li:nth-of-type(6)>a>img{
+	border-right: none;
+}
+/* 设置下拉框里的文字p */
+.center_list>ul>li>a>p{
+	font-size: 12px;
+	line-height: 15px;
+	color: #333;
+	padding-left: 55px;
+	margin-bottom: 2px;
+}
+/* 设置下拉框里底部文字 */
+.center_list>ul>li>a>p:nth-of-type(2){
+	color:#ff6700;
+}
+/* 导航菜单内部容器右侧容器 */
+.nei-right{
+	float: right;
+	margin-top: 25px;
+	width: 300px;height: 50px;
+}
+/* 导航菜单内部容器右侧容器设置hover修改下面的表单元素 */
+.nei-right:hover>input{
+	border: rgba(0,0,0,.3) solid 1px;
+	border-right: none;
+}
+/* 导航菜单内部容器右侧容器设置hover修改下面的a元素 */
+.nei-right:hover>a{
+	border: rgba(0,0,0,.3) solid 1px;
+	padding: 10px 15px 10px 16px;
+}
+/* 右侧容器里的输入框 */
+.nei-right>input{
+	float: left;
+	position: relative;
+	width: 224px;
+	height: 100%;
+	outline:none;
+	padding: 0 10px;
+	font-size: 14px;
+	border: rgba(0,0,0,.2) solid 1px;
+}
+/* 右侧容器里的输入框添加focus */
+.nei-right>input:focus{
+	border: orangered solid 1px;
+	border-right: none;
+}
+/* 右侧容器里的输入框添加focus设置搜索下拉框 */
+.nei-right>input:focus~.right-search{
+	display: block;
+}
+/* 右侧容器里的输入框添加focus修改a */
+.nei-right>input:focus+a{
+	border: orangered solid 1px;
+	padding: 10px 15px 10px 16px;
+}
+/* 右侧容器里的搜索图标 */
+.nei-right>a::before{
+	content: "\e623";
+	font-family: iconfont;
+	font-weight: bold;
+}
+/* 右侧容器里的搜索图标容器 */
+.nei-right>a{
+	float: left;
+	display: block;
+	color: #333333;
+	height: 30px;
+	padding: 10px 15px;
+	font-size: 20px;
+	line-height: 30px;
+	border: rgba(0,0,0,.2) solid 1px;
+}
+/* 给搜索图标容器添加hover */
+.nei-right>a:hover{
+	border: orangered solid 1px;
+	background-color: orangered;
+	color: white;
+}
+/* 输入框下拉菜单 */
+.right-search{
+	position: absolute;
+	display: none;
+	top:76px;
+	width: 244px;
+	border: orangered solid 1px;
+	background-color: white;
+	z-index: 8;
+}
+/* 输入框下拉菜单li */
+.right-search>ul>li{
+	height: 30px;
+	padding: 0 15px;
+}
+/* 输入框下拉菜单li添加hover */
+.right-search>ul>li:hover{
+	background-color:rgba(0,0,0,.1);
+}
+/* 输入框下拉菜单a */
+.right-search>ul>li>a{
+	font-size: 12px;
+	color: #333333;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* 横幅容器 */
+.banner{
+	height: 460px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* 横幅左侧ul菜单 */
+.banner-ul{
+	position: absolute;
+	z-index: 10;
+	width: 234px;
+	padding: 20px 0;
+	background: rgba(105,101,101,.6);
+}
+/* 给第一个li设置hover修改第一个弹出框 */
+.banner-ul>li:nth-of-type(1):hover>.banner_one{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第二个弹出框 */
+.banner-ul>li:nth-of-type(2):hover>.banner_tow{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第三个弹出框 */
+.banner-ul>li:nth-of-type(3):hover>.banner_three{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第四个弹出框 */
+.banner-ul>li:nth-of-type(4):hover>.banner_four{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第五个弹出框 */
+.banner-ul>li:nth-of-type(5):hover>.banner_five{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第六个弹出框 */
+.banner-ul>li:nth-of-type(6):hover>.banner_six{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第七个弹出框 */
+.banner-ul>li:nth-of-type(7):hover>.banner_seven{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第八个弹出框 */
+.banner-ul>li:nth-of-type(8):hover>.banner_eight{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第九个弹出框 */
+.banner-ul>li:nth-of-type(9):hover>.banner_nine{
+	opacity: 1;
+	width: 991px;
+}
+/* 给第一个li设置hover修改第十个弹出框 */
+.banner-ul>li:nth-of-type(10):hover>.banner_ten{
+	opacity: 1;
+	width: 991px;
+}
+
+/* 横幅弹出层 */
+.banner_list{
+	position: absolute;
+	z-index: 11;
+	overflow: hidden;
+	width: 0;
+	height: 460px;
+	top: 0;
+	left: 234px;
+	background-color:white;
+	border: 1px solid #e0e0e0;
+	opacity: 0;
+	transition: .5s;
+}
+.banner_list>ul{
+	float: left;
+	width: 247px;height: 462px;
+}
+.banner_list>ul>li{
+	width: 225px;
+	height: 40px;
+	padding: 18px 20px;
+}
+.banner_list>ul>li>a{
+	display: block;
+	font-size: 12px;
+	color: #333;
+	height: 40px;
+}
+.banner_list>ul>li>a>img{
+	float: left;
+	height: 40px;
+}
+.banner_list>ul>li>a>span{
+	float: left;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 横幅左侧ul菜单的右箭头 */
+.banner-ul>li>a::after{
+	content: "\e601";
+	font-family: iconfont;
+	float: right;
+}
+/* 横幅左侧ul菜单下的a */
+.banner-ul>li>a{
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	color: white;
+	padding: 0 20px;
+}
+/* 横幅左侧ul菜单下的li设置hover修改子元素a */
+.banner-ul>li:hover>a{
+	background-color:#ff6700;
+}
+ /* 横幅图片容器ul */
+.banner-img{
+	position: absolute;
+	left: 0;
+	width: 4904px;
+	height: 460px;
+	/* animation: move 15s infinite alternate; */
+}
+/* 设置轮播图动画 */
+@keyframes move{
+	0%{
+		left: 0;
+	}
+	34%{
+		left: -1226px;
+	}
+	67%{
+		left: -2452px;
+	}
+	100%{
+		left: -3678px;
+	}
+}
+/* 横幅图片容器ul里的li */
+.banner-img>li{
+	border: 0;
+	float: left;
+}
+/* 横幅图片容器下li里的a */
+.banner-img>li>a{
+	display: block;
+	height: 460px;
+}
+/* 横幅图片 */
+.banner-img>li>a>img{
+	height: 460px;
+}
+/* 横幅图片容器左右换页图标公共属性 */
+.banner>div::before{
+	font-size: 35px;
+}
+/* 横幅图片容器左换页图标及容器 */
+.banner-left{
+	position: absolute;
+	cursor: pointer;
+	color: rgba(0,0,0,.2);
+	top: 50%;
+	left: 234px;
+	margin-top: -34px;
+	text-align: center;
+	line-height: 69px;
+	width: 41px;height: 69px;
+}
+/* 给左右换页图标容器添加hover */
+.banner-left:hover,.banner-right:hover{
+	background-color: rgba(117, 120, 122,.8);
+	color: rgba(255,255,255,.8);
+}
+/* 横幅图片容器右换页图标及容器 */
+.banner-right{
+	position: absolute;
+	cursor: pointer;
+	color: rgba(0,0,0,.2);
+	top: 50%;
+	right: 0;
+	margin-top: -34px;
+	text-align: center;
+	line-height: 69px;
+	width: 41px;height: 69px;
+}
+/* 横幅图片下的换页小点容器ul */
+.banner-bottom{
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 0;
+}
+/* 横幅图片下的换页小点li */
+.banner-bottom>li{
+	list-style: none;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.4);;
+	margin: 0 4px;
+	float: left;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #fff;;
+	border-radius: 50%;
+}
+/* 横幅图片下的第一个换页小点设置样式 */
+.banner-bottom>li:nth-of-type(1){
+	background-color: whitesmoke;
+	border:rgba(0,0,0,.5) 2px solid;
+}
+/* 横幅图片下的换页小点设置hover */
+.banner-bottom>li:hover{
+	background-color: whitesmoke;
+	border:rgba(0,0,0,.5) 2px solid;
+}
+/* 横幅底部快捷菜单容器 */
+.kuaijie-nav{
+	height: 170px;
+	margin-top: 14px;
+}
+/* 横幅底部快捷菜单容器下的ul */
+.kuaijie-nav>ul{
+	height: 100%;
+	width: 100%;
+}
+/* 横幅底部快捷菜单容器下的li */
+.kuaijie-nav>ul>li{
+	float: left;
+	width: 316px;
+	height: 100%;
+	background-color: #55A532;
+	margin-right: 15px;
+}
+/* 横幅底部快捷菜单容器下的第一个li单独样式 */
+.kuaijie-nav>ul>.nav-one{
+	padding: 3px;
+	background: #5f5750;
+	width: 228px;
+	height: 164px;
+	margin-right: 14px;
+}
+/* 第一个快捷菜单图标容器下的ul */
+.nav-one>ul{
+	height:164px ;
+	width: 228px;
+}
+/* 单图标容器下的ul每个li设置边框 */
+.nav-one>ul>li:nth-of-type(1),.nav-one>ul>li:nth-of-type(2){
+	border-right: rgba(255,255,255,.1) solid 1px;
+	border-bottom: rgba(255,255,255,.1) solid 1px;
+}
+.nav-one>ul>li:nth-of-type(3){
+	border-bottom: rgba(255,255,255,.1) solid 1px;
+}
+.nav-one>ul>li:nth-of-type(4),.nav-one>ul>li:nth-of-type(5){
+	border-right: rgba(255,255,255,.1) solid 1px;
+}
+/* 第一个快捷菜单图标容器下的li */
+.nav-one>ul>li{
+	float: left;
+	width: 75px;height: 82px;
+}
+/* 第一个快捷菜单图标容器下的li下的a容器 */
+.nav-one>ul>li>a{
+	display: block;
+	padding-top: 15px;
+	width: 100%;
+	height: 67px;
+	font-size: 30px;
+	text-align: center;
+	color:rgba(255,255,255,.5);
+}
+/* 字体图标容器设置hover */
+.nav-one>ul>li>a:hover{
+	color: rgba(255,255,255,.8);
+}
+/* 字体图标下的文字 */
+.nav-one>ul>li>a>p{
+	font-size: 12px;
+}
+/* 横幅底部快捷菜单容器下的最后一个li单独样式 */
+.kuaijie-nav>ul>li:nth-of-type(4){
+	margin-right: 0;
+}
+/* 设置菜单里a */
+.kuaijie-nav>ul>li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+/* 设置快捷菜单图片 */
+.kuaijie-nav>ul>li>a>img{
+	height: 100%;
+}
